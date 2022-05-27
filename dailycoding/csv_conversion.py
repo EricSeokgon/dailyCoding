@@ -44,7 +44,7 @@ for i in range(0, rowsLen):
         current_time = time.strftime("%Y.%m.%d/%H:%M:%S", time.localtime(time.time()))
         current_date = time.strftime("%Y_%m_%d", time.localtime(time.time()))
 
-        with open(csv_path + file_nm + f"_{current_date}" + ".txt", "a") as f:
+        with open(csv_path + file_nm + f"_{current_date}" + ".log", "a") as f:
              f.write(f"[{current_time}] : " + file_list_csv[i] + "\n")
              for line in result_string.split(r'\n'):
                  f.write(line)
